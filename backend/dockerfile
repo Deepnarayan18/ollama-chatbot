@@ -1,0 +1,12 @@
+# Backend - Flask + Socket.IO
+FROM python:3.10-slim
+
+WORKDIR /app
+
+COPY . /app
+
+RUN pip install --no-cache-dir flask flask-socketio requests eventlet
+
+EXPOSE 5000
+
+CMD ["python", "app.py"]
